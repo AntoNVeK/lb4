@@ -47,6 +47,8 @@ void Printer_Table::showTableShips(Game &game, bool flag)
 
 void Printer_Table::showTable(Game &game, bool flag)
 {
-    
-    show.showTable(game.get_player_table(), flag);
+    if (flag)   
+        show.showTable(game.get_player_table(), flag);
+    else
+        show.showTable(game.get_enemy_table(), flag);
 }
